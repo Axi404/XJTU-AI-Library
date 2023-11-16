@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "0f62f505cf62b84b",
+    "type": "split",
+    "children": [
+      {
+        "id": "42fca450bd10886d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a971381e28edb0c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机知识/Git/Git教程.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "17fd7f1a94cbe899",
+    "type": "split",
+    "children": [
+      {
+        "id": "104e19c9f016b93f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4f5be6631f674214",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "51da4a5c5c07296a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ead7885fc6b7025c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "986bd5a685f090e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d14f77ddff10098",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46d32581cd8fc054",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "计算机知识/Git/Git教程.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ba4fd0ebafb07a6e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "计算机知识/Git/Git教程.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e904f510d0668de2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1b9c8ed43da7a85d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "计算机知识/Git/Git教程.md"
+              }
+            }
+          },
+          {
+            "id": "bbee0d12b142404b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "a971381e28edb0c9",
+  "lastOpenFiles": [
+    "LICENSE",
+    "Home.md",
+    "回收站/2023年/知识库编写规范（Version 0.01）.md",
+    "计算机知识/计算机常识/计算机通识常识/添加环境变量.md",
+    "计算机知识/计算机常识/计算机常识目录.md",
+    "计算机知识/计算机常识/计算机操作系统常识/磁盘存储格式.md",
+    "工具汇总/工具汇总.md",
+    "images/计算机知识/Git/Git sync fork.png",
+    "计算机知识/Git/Git教程.md",
+    "images/计算机知识/Git",
+    "images/计算机知识/未命名.md",
+    "通识知识/Obsidian/Obsidian编写指南.md",
+    "相关信息/贡献者须知.md",
+    "计算机知识/C++教程/C++基础/C++ Windows环境配置.md",
+    "通识知识/Obsidian/Obsidian阅读指南.md",
+    "计算机知识/Linux教程/Linux安装教程/Ubuntu安装教程.md",
+    "images/计算机知识/Git/Git workflow.png",
+    "readme.md",
+    "相关信息/关于本知识库.md",
+    "images/计算机知识/计算机常识/计算机通识常识/添加环境变量/系统属性.png",
+    "通识知识/通识知识知识目录.md",
+    "计算机知识/计算机知识知识目录.md",
+    "人工智能知识/论文阅读/论文阅读目录.md",
+    "数学知识/机器学习/统计学习方法学习笔记.md",
+    "计算机知识/建站指南/一份使用面板的简短建站指南.md",
+    "相关信息/知识库编写规范.md",
+    "计算机知识/Markdown/Markdown教程.md",
+    "计算机知识/Linux教程/Linux教程知识目录.md",
+    "计算机知识/Linux教程/Linux安装教程/Ubuntu 配置指南.md",
+    "计算机知识/LaTeX/LaTeX数学公式.md",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab5.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab4.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab3.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab2.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab1.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Fig7.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Fig6.png",
+    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记",
+    "images/人工智能知识/论文阅读",
+    "images/人工智能知识",
+    "人工智能知识/论文阅读",
+    "人工智能知识",
+    "images/计算机知识/C++教程/C++基础/C++ Windows环境配置",
+    "images/计算机知识/C++教程/C++基础",
+    "images/计算机知识/C++教程",
+    "images/计算机知识/C++教程/C++基础/新建文件夹"
+  ]
+}

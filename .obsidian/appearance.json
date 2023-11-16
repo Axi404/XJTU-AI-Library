@@ -1,0 +1,10 @@
+{
+  "accentColor": "#fb0404",
+  "theme": "moonstone",
+  "cssTheme": "",
+  "baseFontSize": 21,
+  "translucency": true,
+  "textFontFamily": "FiraCode Nerd Font",
+  "interfaceFontFamily": "FiraCode Nerd Font",
+  "monospaceFontFamily": "FiraCode Nerd Font"
+}
