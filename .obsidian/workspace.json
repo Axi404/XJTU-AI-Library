@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "计算机知识/Git/Git教程.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -159,6 +159,8 @@
   },
   "active": "a971381e28edb0c9",
   "lastOpenFiles": [
+    "回收站/回收站说明.md",
+    "计算机知识/Git/Git教程.md",
     "LICENSE",
     "Home.md",
     "回收站/2023年/知识库编写规范（Version 0.01）.md",
@@ -167,7 +169,6 @@
     "计算机知识/计算机常识/计算机操作系统常识/磁盘存储格式.md",
     "工具汇总/工具汇总.md",
     "images/计算机知识/Git/Git sync fork.png",
-    "计算机知识/Git/Git教程.md",
     "images/计算机知识/Git",
     "images/计算机知识/未命名.md",
     "通识知识/Obsidian/Obsidian编写指南.md",
@@ -203,7 +204,6 @@
     "人工智能知识",
     "images/计算机知识/C++教程/C++基础/C++ Windows环境配置",
     "images/计算机知识/C++教程/C++基础",
-    "images/计算机知识/C++教程",
-    "images/计算机知识/C++教程/C++基础/新建文件夹"
+    "images/计算机知识/C++教程"
   ]
 }
