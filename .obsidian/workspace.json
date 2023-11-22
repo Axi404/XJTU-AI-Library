@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "42fca450bd10886d",
+        "id": "f61882a2ea296037",
         "type": "tabs",
         "children": [
           {
-            "id": "a971381e28edb0c9",
+            "id": "e104ac165503b702",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机知识/Git/Git教程.md",
+                "file": "数学知识/数学方法/数学方法复习笔记.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机知识/Git/Git教程.md",
+                "file": "数学知识/数学方法/数学方法复习笔记.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机知识/Git/Git教程.md",
+                "file": "数学知识/数学方法/数学方法复习笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机知识/Git/Git教程.md"
+                "file": "数学知识/数学方法/数学方法复习笔记.md"
               }
             }
           },
@@ -157,12 +157,15 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "a971381e28edb0c9",
+  "active": "e104ac165503b702",
   "lastOpenFiles": [
+    "Pasted image 20231122014727.png",
+    "Pasted image 20231122013623.png",
+    "Pasted image 20231122002942.png",
+    "Home.md",
     "回收站/回收站说明.md",
     "计算机知识/Git/Git教程.md",
     "LICENSE",
-    "Home.md",
     "回收站/2023年/知识库编写规范（Version 0.01）.md",
     "计算机知识/计算机常识/计算机通识常识/添加环境变量.md",
     "计算机知识/计算机常识/计算机常识目录.md",
@@ -189,14 +192,11 @@
     "计算机知识/Markdown/Markdown教程.md",
     "计算机知识/Linux教程/Linux教程知识目录.md",
     "计算机知识/Linux教程/Linux安装教程/Ubuntu 配置指南.md",
-    "计算机知识/LaTeX/LaTeX数学公式.md",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab5.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab4.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab3.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab2.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab1.png",
-    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Fig7.png",
-    "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Fig6.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记",
     "images/人工智能知识/论文阅读",
     "images/人工智能知识",
