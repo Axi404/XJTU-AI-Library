@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
+                "file": "数学知识/现代方法/人工智能的现代方法复习大纲.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
+                "file": "数学知识/现代方法/人工智能的现代方法复习大纲.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
+                "file": "数学知识/现代方法/人工智能的现代方法复习大纲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md"
+                "file": "数学知识/现代方法/人工智能的现代方法复习大纲.md"
               }
             }
           },
@@ -159,8 +159,9 @@
   },
   "active": "be404db7455dc5d5",
   "lastOpenFiles": [
-    "数学知识/数学方法/计算机科学与人工智能的数学基础下复习大纲.md",
     "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
+    "数学知识/现代方法/人工智能的现代方法复习大纲.md",
+    "数学知识/数学方法/计算机科学与人工智能的数学基础下复习大纲.md",
     "数学知识/数学方法/计算机科学与人工智能的数学基础上复习大纲.md",
     "数学知识/现代方法",
     "Home.md",
@@ -193,7 +194,6 @@
     "数学知识/机器学习/统计学习方法学习笔记.md",
     "计算机知识/建站指南/一份使用面板的简短建站指南.md",
     "相关信息/知识库编写规范.md",
-    "计算机知识/Markdown/Markdown教程.md",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab5.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab4.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab3.png",
