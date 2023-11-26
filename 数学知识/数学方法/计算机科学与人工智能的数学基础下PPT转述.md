@@ -1,3 +1,4 @@
+本教程可用于 PPT 的复习，包括 PPT 中提及的全部知识点，另精简版教程见 [[计算机科学与人工智能的数学基础下复习大纲]]。
 # 引言
 
 ## 数值算法概论
@@ -1609,6 +1610,28 @@ A_{j}>0 & k=j
 \end{array}(j, k=0,1,2, \cdots)\right.$$
 
 则称函数系 $\left\{\varphi_{k}(x)\right\}$ 是给定点集 $\left\{x_{i}\right\}(i=0,1,2, \cdots, m)$ 上带权 $\omega_{i}(i=0,1,2, \cdots, m)$ 的正交函数系
+
+### 定义 4.12
+
+设 $p_{n}(x)$ 是首项系数 $a_{n} \neq 0$ 的 $n$ 次多项式，若多项式序列 $\left\{p_{n}(x)\right\}_{0}^{\infty}$ 满足
+
+$$\left (p_{k}, p_{j}\right)=\int_{a}^{b} \rho (x) p_{k}(x) p_{j}(x) d x=\left\{\begin{array}{lr}
+0 & k \neq j \\
+A_{j}>0 & k=j
+\end{array}\right.$$
+
+则称多项式序列 $\left\{p_{n}(x)\right\}_{0}^{\infty}$ 为 $[a, b]$ 上带权 $\rho (x)$ 的 $n$ 次正交多项式离散节点上的正交多项式系
+
+### 定义 4.13
+
+设 $p_{n}(x)$ 是首项系数 $a_{n} \neq 0$ 的 $n$ 次多项式，若多项式序列 $\left\{p_{n}(x)\right\}_{0}^{\infty}$ 满足
+
+$$\left (p_{k}, p_{j}\right)=\sum_{i=0}^{m} \omega_{i} p_{k}\left (x_{i}\right) p_{j}\left (x_{i}\right)=\left\{\begin{array}{lr}
+0 & k \neq j \\
+A_{j}>0 & k=j
+\end{array}(j, k=0,1,2, \cdots)\right.$$
+
+则称多项式序列 $\left\{p_{n}(x)\right\}_{0}^{\infty}$ 为给定点集 $\left\{x_{i}\right\} \quad (i=0,1,2, \cdots, m)$ 上带权系数 $\omega_{i}   (i=0,1,2, \cdots, m)$ 的 $n$ 次正交多项式
 
 ## 最佳一致逼近
 

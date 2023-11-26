@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9a660ed859b77dc7",
+        "id": "5306f30517beee93",
         "type": "tabs",
         "children": [
           {
-            "id": "c471bd089c7581ec",
+            "id": "be404db7455dc5d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数学知识/数学方法/数学方法复习笔记.md",
+                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数学知识/数学方法/数学方法复习笔记.md",
+                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数学知识/数学方法/数学方法复习笔记.md",
+                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数学知识/数学方法/数学方法复习笔记.md"
+                "file": "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md"
               }
             }
           },
@@ -157,14 +157,16 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "c471bd089c7581ec",
+  "active": "be404db7455dc5d5",
   "lastOpenFiles": [
-    "数学知识/数学方法/计算机科学与人工智能的数学基础复习大纲.md",
-    "数学知识/数学方法/数学方法复习笔记.md",
+    "数学知识/数学方法/计算机科学与人工智能的数学基础下复习大纲.md",
+    "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
+    "数学知识/数学方法/计算机科学与人工智能的数学基础上复习大纲.md",
+    "数学知识/现代方法",
+    "Home.md",
     "Pasted image 20231122014727.png",
     "Pasted image 20231122013623.png",
     "Pasted image 20231122002942.png",
-    "Home.md",
     "回收站/回收站说明.md",
     "计算机知识/Git/Git教程.md",
     "LICENSE",
@@ -192,7 +194,6 @@
     "计算机知识/建站指南/一份使用面板的简短建站指南.md",
     "相关信息/知识库编写规范.md",
     "计算机知识/Markdown/Markdown教程.md",
-    "计算机知识/Linux教程/Linux教程知识目录.md",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab5.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab4.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab3.png",
@@ -203,7 +204,6 @@
     "人工智能知识/论文阅读",
     "人工智能知识",
     "images/计算机知识/C++教程/C++基础/C++ Windows环境配置",
-    "images/计算机知识/C++教程/C++基础",
-    "images/计算机知识/C++教程"
+    "images/计算机知识/C++教程/C++基础"
   ]
 }
