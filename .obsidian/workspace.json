@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5306f30517beee93",
+        "id": "3841ebb757b66d55",
         "type": "tabs",
         "children": [
           {
-            "id": "be404db7455dc5d5",
+            "id": "2ee131fecc57c32f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -157,11 +157,12 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "be404db7455dc5d5",
+  "active": "2ee131fecc57c32f",
   "lastOpenFiles": [
     "数学知识/数学方法/计算机科学与人工智能的数学基础下PPT转述.md",
-    "数学知识/现代方法/人工智能的现代方法复习大纲.md",
+    "数学知识/数学方法/数学方法下试卷2023.md",
     "数学知识/数学方法/计算机科学与人工智能的数学基础下复习大纲.md",
+    "数学知识/现代方法/人工智能的现代方法复习大纲.md",
     "数学知识/数学方法/计算机科学与人工智能的数学基础上复习大纲.md",
     "数学知识/现代方法",
     "Home.md",
@@ -193,7 +194,6 @@
     "人工智能知识/论文阅读/论文阅读目录.md",
     "数学知识/机器学习/统计学习方法学习笔记.md",
     "计算机知识/建站指南/一份使用面板的简短建站指南.md",
-    "相关信息/知识库编写规范.md",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab5.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab4.png",
     "images/人工智能知识/论文阅读/Mutual Correction Framework学习笔记/Mutual Correction Framework-Tab3.png",

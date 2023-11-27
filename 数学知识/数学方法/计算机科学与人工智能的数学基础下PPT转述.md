@@ -442,7 +442,7 @@ $$\varphi^{(n)}\left (x^{*}\right)=0 ， n=1,2, \cdots, p-1 \text { ，但 } \va
 
 将式 $x_{k+1}=x_{k}-\frac{f\left (x_{k}\right)}{f^{\prime}\left (x_{k}\right)}$ 写成不动点迭代形式 $x_{k+1}=\varphi\left (x_{k}\right)$，式中 $\varphi (x)=   x-\frac{f (x)}{f^{\prime}(x)}$，称其为牛顿迭代函数。
 
-因为 $x^{*}$ 为 $f (x)=0$ 的单根，所以 $f^{\prime}\left (x^{*}\right) \neq 0$，从而 $x^{*}=\varphi\left (x^{*}\right)$，即 $x^{*}$ 是 $\varphi (x)$ 的不动点。对迭代函数 $\varphi (x)$ 求倒数，得：
+因为 $x^{*}$ 为 $f (x)=0$ 的单根，所以 $f^{\prime}\left (x^{*}\right) \neq 0$，从而 $x^{*}=\varphi\left (x^{*}\right)$，即 $x^{*}$ 是 $\varphi (x)$ 的不动点。对迭代函数 $\varphi (x)$ 求导数，得：
 
 $$\varphi^{\prime}(x)=1-\frac{\left[f^{\prime}(x)\right]^{2}-f (x) f^{\prime \prime}(x)}{\left[f^{\prime}(x)\right]^{2}}=\frac{f (x) f^{\prime \prime}(x)}{\left[f^{\prime}(x)\right]^{2}}$$
 
@@ -1394,11 +1394,11 @@ $$H_{1}(x)=\left (x-x_{1}\right)\left (\frac{x-x_{0}}{x_{1}-x_{0}}\right)^{2}$$
 
 2. $S (x)$ 在每个小区间 $\left[x_{i}, x_{i+1}\right](i=0,1,2, \cdots, n)$ 内是三次多项式
 
-3. 若  S (x)  在节点上还满足插值条件:$$S\left (x_{i}\right)=f\left (x_{i}\right) \quad (i=0,1,2, \cdots, n)$$
+3. 若  S (x)  在节点上还满足插值条件: $$S\left (x_{i}\right)=f\left (x_{i}\right) \quad (i=0,1,2, \cdots, n)$$
 
 则称 $S (x)$ 是插值区间 $[a, b]$ 内的三次样条插值函数
 
-在每个小区间 $\left[x_{i}, x_{i+1}\right]$ 内是三次多项式，有 4 个待定系数，由于在插值区间 $[a, b]$ 共有 $n$ 个小区间，故 $S (x)$ 有 $4 n$ 个待定系数。由条件 1可知，$S (x)$ 在 $(n-1)$ 个内节点上应该满足
+在每个小区间 $\left[x_{i}, x_{i+1}\right]$ 内是三次多项式，有 4 个待定系数，由于在插值区间 $[a, b]$ 共有 $n$ 个小区间，故 $S (x)$ 有 $4 n$ 个待定系数。由条件 1 可知，$S (x)$ 在 $(n-1)$ 个内节点上应该满足
 
 $$\left\{\begin{array}{c}
 S\left (x_{i}-0\right)=S\left (x_{i}+0\right) \\
@@ -1631,11 +1631,168 @@ $$\left (p_{k}, p_{j}\right)=\sum_{i=0}^{m} \omega_{i} p_{k}\left (x_{i}\right) 
 A_{j}>0 & k=j
 \end{array}(j, k=0,1,2, \cdots)\right.$$
 
-则称多项式序列 $\left\{p_{n}(x)\right\}_{0}^{\infty}$ 为给定点集 $\left\{x_{i}\right\} \quad (i=0,1,2, \cdots, m)$ 上带权系数 $\omega_{i}   (i=0,1,2, \cdots, m)$ 的 $n$ 次正交多项式
+则称多项式序列 $\left\{p_{n}(x)\right\}_{0}^{\infty}$ 为给定点集 $\left\{x_{i}\right\} \quad (i=0,1,2, \cdots, m)$ 上带权系数 $\omega_{i}   (i=0,1,2, \cdots, m)$ 的 $n$ 次正交多项式。
+
+### 切比雪夫多项式
+
+源起于多倍角的余弦函数和正弦函数的展开式
+
+若记 $\cos (n \arccos x)=T_{n}(x)$，则在区间 $[-1,1]$ 内切比雪夫多项式可以表示为:
+
+$$T_{n}(x)=\cos (n \arccos x) \quad (n=0,1, \cdots)$$
+
+若令 $x=\cos \theta$，则 $T_{n}(x)=\cos n \theta (0 \leq \theta \leq \pi)$，利用三角函数公式，可将 $\cos n \theta$ 展开为 $\cos \theta$ 的一个 $n$ 次多项式，故 $T_{n}(x)$ 为 $x$ 的 $n$ 次多项式。
+
+余弦 $\cos n \alpha$ 是众所周知得偶函数，它的倍角公式如下：
+
+$$\left\{\begin{array}{c}
+\cos 2 \alpha=2 \cos ^{2} \alpha-1 \\
+\cos 3 \alpha=4 \cos ^{3} \alpha-3 \cos \alpha \\
+\cos 4 \alpha=8 \cos ^{4} \alpha-8 \cos ^{2} \alpha+1 \\
+\cos 5 \alpha=16 \cos ^{5} \alpha-20 \cos ^{3} \alpha+5 \cos \alpha
+\end{array}\right.$$
+
+猜想：
+
+$$\begin{aligned}
+2 \cos n \alpha & =\sum_{m=0}(-1)^{m} a_{n, m}(2 \cos \alpha)^{n-2 m},\left (n \in N^{+} ; m \epsilon N\right) \\
+2 \cos n \alpha & =(2 \cos \alpha)^{n}+\sum_{m=1}^{\text {ent } n / 3}(-1)^{m} \frac{n}{m} C_{n-m-1}^{m-1}(2 \cos \alpha)^{n-2 m}
+\end{aligned}$$
+
+上式为 $n$ 倍角余弦公式
+
+$$\cos n \alpha=2^{n-1}(\cos \alpha)^{n}-\alpha_{n-2}(\cos \alpha)^{n-2}+\alpha_{n-4}(\cos \alpha)^{n-4}+\cdots$$
+
+其中 $\alpha_{i}$ 为正整数，因为 $\cos \alpha$ 在 $\alpha \epsilon[0, \pi]$ 上单调，对应值为 1 降到-1，即
+
+$$\cos \alpha \epsilon[-1,1], \alpha \in[0, \pi]$$
+
+由于存在反函数，若令 $\cos \alpha=x$，则
+
+$$\alpha=\arccos x, \quad x \in[-1,1], \alpha \in[0, \pi]$$
+
+则倍角公式为
+
+$$\begin{aligned}
+& \cos (n \arccos x) \\
+& =2^{n-1}[\cos (\arccos x)]^{n}-\alpha_{n-2}[\cos (\arccos x)]^{n-2} \\
+& +\alpha_{n-4}[\cos (\arccos x)]^{n-4}+\cdots \\
+= & 2^{n-1} x^{n}-\alpha_{n-2} x^{n-2}+\alpha_{n-4} x^{n-4}+\cdots
+\end{aligned}$$
+
+#### 切比雪夫多项式的性质
+
+1) 正交性
+
+$$\left (T_{n}, T_{m}\right)=\int_{-1}^{1} \frac{T_{n}(x) T_{m}(x)}{\sqrt{1-x^{2}}} d x=\left\{\begin{array}{c}
+0, m \neq n \\
+\frac{\pi}{2}, m=n \neq 0 \\
+\pi, m=n=0
+\end{array}\right.$$
+
+事实上，令 $x=\cos \theta, d x=-\sin \theta d \theta$，代入得
+
+$$\left (T_{n}, T_{m}\right)=\int_{-1}^{1} \frac{T_{n}(x) T_{m}(x)}{\sqrt{1-x^{2}}} d x=\int_{0}^{\pi} \cos n \theta \sin m \theta d \theta=\left\{\begin{array}{c}
+0, m \neq n \\
+\frac{\pi}{2}, m=n \neq 0 \\
+\pi, m=n=0
+\end{array}\right.$$
+
+2) 递推公式
+
+$$T_{n+1}(x)=2 x T_{n}(x)-T_{n-1}(x) \quad (n=1,2, \cdots)$$
+
+式中 $T_{0}(x)=1$，$T_{1}(x)=x$，由于 $x=\cos \theta$，$T_{n+1}(x)=   \cos (n+1) \theta$，利用三角公式 $\cos (n+1) \theta+\cos (n-1) \theta=   2 \cos \theta \cos n \theta$，可得
+
+$$\begin{array}{c}
+T_{2}(x)=2 x^{2}-1 \\
+T_{3}(x)=4 x^{3}-3 x \\
+T_{4}(x)=8 x^{4}-8 x^{2}+1 \\
+T_{5}(x)=16 x^{5}-20 x^{3}+5 x \\
+T_{6}(x)=32 x^{6}-48 x^{4}+18 x^{2}-1
+\end{array}$$
+
+3) 奇偶性
+
+$$T_{n}(-x)=(-1)^{n} T_{n}(x)$$
+
+4) $T_{n}(x)$ 在 $(-1,1)$ 内得 $n$ 个零点为
+
+$$x_{k}=\cos \frac{2 k-1}{2 n} \pi (k=1,2, \cdots, n)$$
+
+在 $[-1,1]$ 内得 $n+1$ 个极值点
+
+$$y_{k}=\cos \frac{k}{n} \pi (k=0,1,2, \cdots, n)$$
+
+5) $T_{n}(x)$ 的最高次幂 $x^{n}$ 的系数为 $2^{n-1}(n \geq 1)$ 
 
 ## 最佳一致逼近
 
+### 定义 4.14
 
+设 $f (x) \in C[a, b]$，那么对于任意的 $\varepsilon>0$，若存在多项式 $p (x)$，使得不等式
+
+$$\max _{a \leq x \leq b}|p (x)-f (x)|<\varepsilon$$
+
+则称多项式 $p (x)$ 在 $[a, b]$ 内一致逼近于 $f (x)$
+
+### 定理 4.4
+
+**Weierstrass 定理**：设 $f (x) \in C[a, b]$，那么对于任意的 $\varepsilon>0$，都存在多项式 $p (x)$，使得不等式
+
+$$\max _{a \leq x \leq b}|p (x)-f (x)|<\varepsilon$$
+
+### 最佳一致逼近式
+
+伯恩斯坦 (Bernstein)构造出了一致逼近多项式：
+
+$$B_{n}(f, x)=\sum_{k=0}^{n} f\left (\frac{k}{n}\right) P_{k}(x)$$
+
+式中 $P_{k}(x)=\left (\begin{array}{l}n \\ k\end{array}\right) x^{k}(1-x)^{n-k},\left (\begin{array}{l}n \\ k\end{array}\right)=\frac{n (n-1) \cdots (n-k+1)}{k !}$，且 $\lim _{n \rightarrow \infty} B_{n}(f, x)=f (x)$ 在 $[0,1]$ 内一致成立
+
+在实际计算时，一般先固定多项式的次数 $n$，再求一个多项式 $p_{n}^{*}(x)$，使 $\max\limits_{a \leq x \leq b}\left|p_{n}^{*}(x)-f (x)\right|$ 最小。这就是最佳一致逼近式
+
+贝塞尔曲线：
+
+$$B_{n}(t)=\sum_{k=0}^{n}\left (\begin{array}{l}
+n \\
+k
+\end{array}\right) t^{k}(1-t)^{n-k} P_{k}$$
+
+### 定义 4.15
+
+记 $P_{n}=  \{次数不超过  n  的多项式的全体  \}$，设 $f (x) \in C[a, b] ， p (x) \in P_{n}$，记
+
+$$\|f-p\|_{\infty}=\max _{a \leq x \leq b}|p (x)-f (x)|=\mu (\mu \geq 0)$$
+
+称 $\mu$ 为 $p (x)$ 与 $f (x)$ 的偏差。
+
+若 $\exists x_{0} \in[a, b]$，使 $\left|f\left (x_{0}\right)-p\left (x_{0}\right)\right|=\mu$，则称 $x_{0}$ 是 $p (x)$ 关于 $f (x)$ 的偏差点。若 $f\left (x_{0}\right)-p\left (x_{0}\right)=\mu$，则称为正偏差点；若 $f\left (x_{0}\right)-p\left (x_{0}\right)=-\mu$，则称为负偏差点
+
+### 定义 4.16
+
+设 $f (x) \in C[a, b]$，若存在 $p_{n}^{*}(x) \in P_{n}$，使：
+
+$$\left\|f-p_{n}^{*}\right\|_{\infty}=\min _{p \in P_{n}}\|f-p\|_{\infty}$$
+
+则称 $p_{n}^{*}(x)$ 为 $f (x)$ 在 $[a, b]$ 内的最佳一致逼近多项式。
+
+### 定理 4.5 
+
+**存在唯一性**：若 $f (x) \in C[a, b]$，则存在唯一的 $p_{n}^{*}(x) \in P_{n}$，使得
+
+$$\left\|f-p_{n}^{*}\right\|_{\infty}=\min _{p \in P_{n}}\|f-p\|_{\infty}$$
+
+### 定理 4.6 
+
+**切比雪夫定理**：$p_{n}^{*}(x)$ 是 $f (x) \in C[a, b]$ 的最佳一致逼近多项式的充要条件是：
+
+在 $[a, b]$ 内至少有 $n+2$ 个轮流为正负的偏差点，即：至少有 $n+2$ 个点 $a \leq x_{1}<x_{2}<\cdots<x_{n+2} \leq b$，使
+
+$$p_{n}^{*}\left (x_{k}\right)-f\left (x_{k}\right)=(-1)^{k} \sigma\left\|f-p_{n}^{*}\right\|_{\infty}$$
+
+
+式中，$\sigma= \pm 1, k=1,2, \cdots, n+2$，上述点 $\left\{x_{k}\right\}_{1}^{n+2}$ 称为切比雪夫交错点组
 
 ## 最佳平方逼近
 
