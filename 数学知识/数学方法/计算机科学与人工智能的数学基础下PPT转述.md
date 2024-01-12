@@ -1792,18 +1792,491 @@ $$\left\|f-p_{n}^{*}\right\|_{\infty}=\min _{p \in P_{n}}\|f-p\|_{\infty}$$
 $$p_{n}^{*}\left (x_{k}\right)-f\left (x_{k}\right)=(-1)^{k} \sigma\left\|f-p_{n}^{*}\right\|_{\infty}$$
 
 
-式中，$\sigma= \pm 1, k=1,2, \cdots, n+2$，上述点 $\left\{x_{k}\right\}_{1}^{n+2}$ 称为切比雪夫交错点组
+式中，$\sigma= \pm 1, k=1,2, \cdots, n+2$，上述点 $\left\{x_{k}\right\}_{1}^{n+2}$ 称为切比雪夫交错点组。
+
+### 近似最佳一致逼近
+
+切比雪夫多项式 $T_{n}(x)$ 的最高次幕为 $n-1 (n \geq 1)$。
+
+$\tilde{T}_{n}(x)=\frac{1}{2^{n-1}} T_{n}(x)$ 是最高项系数为 $1$ 的 $n$ 次多项式。
+
+### 定理 4.7
+
+**与零偏差最小的多项式**：所有最高项系数为 $1$ 的 $n$ 次多项式中，在区间内与零偏差最小的多项式是 $\tilde{T}_{n}(x)$。
 
 ## 最佳平方逼近
 
+### 定义 4.17
 
+**连续函数空间**：设 $\varphi_{0}(x) \varphi_{1}(x) \cdots \varphi_{n}(x)$ 是在 $[a, b]$ 内的线性无关连续函数，$a_{0} a_{1} \cdots   a_{n}$ 是任意实数，则
+
+$$\Phi=\left\{S (x) \text { 的全体 } \mid S (x)=a_{0} \varphi_{0}(x)+\cdots+a_{n} \varphi_{n}(x)\right\}$$
+
+记为 $\operatorname{span}\left\{\varphi_{0}, \varphi_{1}, \cdots, \varphi_{n}\right\}$，称集合 $\Phi$ 是由 $\varphi_{1}(x) \varphi_{2}(x) \cdots \varphi_{n}(x)$ 所生成的线性空间，称 $\varphi_{1}(x) \varphi_{2}(x) \cdots \varphi_{n}(x)$ 为生成函数空间的一个基底。
+
+### 定理 4.8
+
+设 $\varphi_{0}(x), \varphi_{1}(x), \cdots, \varphi_{n}(x) \in[a, b]$，则 $\varphi_{0}(x), \varphi_{1}(x), \cdots, \varphi_{n}(x)$ 线性无关的充要条件是 $\operatorname{det} \boldsymbol{G}_{n} \neq 0$，其中：
+
+$$
+\boldsymbol G_n=\left [\begin{array}{cccccc}
+(\varphi_0,\varphi_0) & (\varphi_0,\varphi_1) &\cdots & (\varphi_0,\varphi_n) \\
+(\varphi_1,\varphi_0) & (\varphi_1,\varphi_1) & &(\varphi_1,\varphi_n) \\
+\vdots & & \ddots & \vdots \\
+(\varphi_n,\varphi_0)& (\varphi_n,\varphi_1)&\cdots & (\varphi_n,\varphi_n) 
+\end{array}\right]
+$$
+
+其中，$\left (\varphi_{i}, \varphi_{j}\right)$ 表示 $\varphi_{i}(x)$ 与 $\varphi_{j}(y)$  的内积。
+
+若取 $\varphi_{k}(x)=x^{k}$，区间取 $[0,1]$，$\rho (x)=1$，$f (x) \in C[0,1]$，则 $\operatorname{span}\left\{1, x, \cdots, x^{n}\right\}$ 为 $n$ 次多项式集合，且
+
+$$P_{n}(x)=a_{0}+a_{1} x+\cdots+a_{n} x^{n}$$
+
+此时由于 $\left (\varphi_{i}, \varphi_{j}\right)=\int_{0}^{1} x^{i+j} d x=\frac{1}{i+j+1}$，则 $\boldsymbol{G}_{n}$ 记为 $\boldsymbol{H}_{n}$。
+
+$$\boldsymbol{H}_{n}=\left[\begin{array}{clcc}
+1 & 1 / 2 & & 1 /(n+1) \\
+1 / 2 & 1 / 3 & \cdots & 1 /(n+2) \\
+& \vdots & \ddots & \vdots \\
+1 /(n+1) & 1 /(n+2) & \cdots & 1 /(2 n+1)
+\end{array}\right]=\left (h_{i j}\right)$$
+
+式中，$\left (h_{i j}\right)=1 /(i+j+1)$，$\boldsymbol{H}_{n}$ 被称为希尔伯特矩阵。
+
+### 定义 4.18
+
+设 $f (x) \in C[a, b]$，如果存在 $S^{*}(x) \in \Phi$ 使
+
+$$\int_{a}^{b} \rho (x)\left[f (x)-S^{*}(x)\right]^{2} d x=\min _{S (x) \in \Phi} \int_{a}^{b} \rho (x)[f (x)-S (x)]^{2} d x$$
+
+则称 $S^{*}(x)$ 是 $f (x)$ 在集合 $\Phi$ 中最佳平方逼近函数。
+
+若 $\Phi=P_{n}=\operatorname{span}\left\{1, x, \cdots, x^{n}\right\}$，则满足定义的 $S^{*}(x)$ 是 $f (x)$ 的 $n$ 次最佳平方逼近多项式。
+
+### 定理 4.9
+
+设 $f (x) \in C[a, b]$，则 $f (x)$ 在集合 $\Phi$ 中存在唯一的最佳平方逼近函数 $S^{*}(x)$。
+
+证明：构造函数 $S^{*}(x)$，求 $S^{*}(x) \in \emptyset$ 等价于求
+
+$$I\left (a_{0}, a_{1}, \cdots, a_{n}\right)=\int_{a}^{b} \rho (x)\left[\sum_{j=0}^{n} a_{j} \varphi_{j}(x)-f (x)\right]^{2} d x$$
+
+关于 $a_{0}, a_{1}, \cdots, a_{n}$ 的极小值。其必要条件是偏导数为 $0$，即
+
+$$\begin{array}{c}
+\frac{\partial I}{\partial a_{k}}=2 \int_{a}^{b} \rho (x)\left[\sum_{j=0}^{n} a_{j} \varphi_{j}(x)-f (x)\right] \varphi_{k}(x) d x (k=0,1, \cdots, n) \\
+\sum_{j=0}^{n}\left (\varphi_{j}(x), \varphi_{k}(x)\right) a_{j}=\left (f (x), \varphi_{k}(x)\right) \quad (k=0,1, \cdots, n)
+\end{array}$$
+
+ > 这是关于 $a_{0}, a_{1}, \cdots, a_{n}$ 的线性方程组，称为法方程。
+
+由于 $\varphi_{1}(x), \varphi_{2}(x), \cdots, \varphi_{n}(x)$ 线性无关，方程组有唯一解：
+
+$$\begin{array}{c}
+a_{k}=a_{k}^{*}(k=0,1, \cdots, n) \\
+S^{*}=a_{0}^{*} \varphi_{0}(x)+a_{1}^{*} \varphi_{1}(x)+\cdots+a_{n}^{*} \varphi_{n}(x)
+\end{array}$$
+
+> 再证明 $S^{*}(x)$ 即为最佳平方平方逼近函数，为此只需考虑：
+
+$$\begin{array}{l}
+D=\int_{a}^{b} \rho (x)[f (x)-S (x)]^{2} d x-\int_{a}^{b} \rho (x)\left[f (x)-S^{*}(x)\right]^{2} d x \\
+=\int_{a}^{b} \rho (x)\left[S (x)-S^{*}(x)\right]^{2} d x+\int_{a}^{b} \rho (x)\left[S^{*}(x)-S (x)\right]\left[f (x)-S^{*}(x)\right] d x
+\end{array}$$
+
+由于 $S^{*}(x)$ 的系数 $a_{j}^{*}(j=0,1, \cdots, n)$ 是 $\sum\limits_{j=0}^{n}\left (\varphi_{j}(x), \varphi_{k}(x)\right) a_{j}=   \left (f (x), \varphi_{k}(x)\right)$ 的解
+
+$$\int_{a}^{b} \rho (x)\left[f (x)-S^{*}(x)\right] \varphi_{k}(x) d x=0$$
+
+于是：
+
+$$D=\int_{a}^{b} \rho (x)\left[S (x)-S^{*}(x)\right]^{2} d x \geq 0$$
+
+这就证明了 $S^{*}(x)$ 是 $f (x)$ 在 $\Phi$ 中的最佳平方逼近函数。
+
+### 最佳平方逼近多项式
+
+若取 $\varphi_{k}(x)=x^{k}(k=0,1, \cdots, n)$，区间取 $[0,1]$，$\rho (x)=1$，$f (x) \in C[0,1]$，在 $\Phi=P_{n}=\operatorname{span}\left\{1, x, \cdots, x^{n}\right\}$ 上的最佳平方逼近多项式为
+
+$$\rho_{n}^{*}(x)=a_{0}^{*}+a_{1}^{*} x+\cdots+a_{n}^{*} x^{n}$$
+
+由于
+
+$$\begin{array}{c}
+\left (\varphi_{j}, \varphi_{k}\right)=\int_{0}^{1} x^{j+k} d x=\frac{1}{j+k+1}(j, k=0,1, \cdots, n) \\
+\left (f, \varphi_{k}\right)=\int_{0}^{1} f (x) x^{k} d x=d_{k}(k=0,1, \cdots, n)
+\end{array}$$
+
+则法方程的系数矩阵 $G_{n}$ 为：
+
+$$\boldsymbol{H}_{n}=\left[\begin{array}{cllc}
+1 & 1 / 2 & & 1 /(n+1) \\
+1 / 2 & 1 / 3 & \cdots & 1 /(n+2) \\
+& \vdots & \ddots & \vdots \\
+1 /(n+1) & 1 /(n+2) & \cdots & 1 /(2 n+1)
+\end{array}\right]=\left (h_{i j}\right)$$
+
+若记 $\boldsymbol{a}=\left (a_{0}, a_{1}, \cdots, a_{n}\right)^{T} ， \boldsymbol{d}=\left (d_{0}, d_{1}, \cdots, d_{n}\right)^{T}$，则法方程可记录为
+
+$$\boldsymbol{H}_{n} \boldsymbol{a}=\boldsymbol{d}$$
+
+其解为 $a_{k}=a_{k}^{*}(k=0,1, \cdots, n)$，由此可得最佳平方逼近多项式 $p_{n}^{*}(x)$。
+
+
+#### 用正交多项式 $\Phi$ 为基的方法求解最佳平方逼近多项式
+
+设 $f (x) \in C[a, b]$，$\Phi=\operatorname{span}\left\{\phi_{0}, \phi_{1}, \cdots \phi_{n}\right\}$，$\phi_{0}, \phi_{1}, \cdots \phi_{n}$ 是正交函数，则当 $i \neq j$ 时，$\left (\varphi_{i}, \varphi_{j}\right)=0 ，\left (\varphi_{j}, \varphi_{j}\right)>0$，法方程的系数矩阵 $G_{n}$ 为非奇异对角阵，方程的解为 $a_{k}{ }^{*}=   \frac{\left (f, \varphi_{k}\right)}{\left (\varphi_{k}, \varphi_{k}\right)}(k=0,1, \cdots n)$，则 $f (x)$ 在 $\Phi$ 中的最佳平方逼近函数为：
+
+$$\varphi^{*}(x)=\sum_{k=0}^{n} \frac{\left (f, \varphi_{k}\right)}{\left\|\varphi_{k}\right\|_{2}{ }^{2}} \varphi_{k}(x)$$
+
+上式称为傅里叶展开 (Fourier)展开，$a_{k}{ }^{*}$ 为广义傅里叶系数。
+
+### 曲线拟合问题
+
+从数据集 $\left (x_{i}, y_{i}\right)(i=0,1,2, \cdots n)$ 中找出总体规律性，并构造一条能够较好反应这种规律的曲线 $p (x)$，此时，并不要求曲线 $p (x)$ 过每个数据点 $\left (x_{i}, y_{i}\right)(i=0,1,2, \cdots n)$，但要求曲线尽可能靠近所有数据点，即所有误差 $\delta_{i}=p\left (x_{i}\right)-y_{i} \quad (i=   0,1,2, \cdots n  )$ 都按某种标准达到最小。
+
+#### 度量标准
+
+-  $\|\delta\|_{1}=\sum_{i=0}^{n}\left|\delta_{i}\right|$
+- $\|\delta\|_{2}^{2}=\sum_{i=0}^{n} \delta_{i}^{2}$
+-  $\|\delta\|_{\infty}=\max\limits _{0 \leq i \leq 1}\left|\delta_{i}\right|$
+
+由于 2 -范数中没有绝对值，计算过程比较方便，因此通常采用 2-范数的平方作为总体误差的度量标准。
+
+#### 多项式拟合
+
+对于给定的一组数据 $\left (x_{i}, y_{i}\right)(i=0,1,2, \cdots n)$，在函数类 $\Phi=   \left\{\varphi_{0}(x), \varphi_{1}(x), \cdots \varphi_{m}(x)\right\}$ 中寻求一个函数 $p (x)$ 使误差的 2 -范数平方。
+
+$$\|\delta\|_{2}^{2}=\sum_{i=0}^{n} \delta_{i}^{2}=\sum_{i=0}^{n}\left (p\left (x_{i}\right)-y_{i}\right)^{2}$$
+
+达到最小。
+
+设 $\varphi_{0}(x), \varphi_{1}(x), \cdots \varphi_{m}(x)$ 是 $\Phi$ 的一组线性无关的基函数。$p (x)$ 为 $\left\{\varphi_{i}(x)\right\} \quad (i=0,1, \cdots m)$ 的线性组合，即：
+
+$$p (x)=a_{0} \varphi_{0}(x)+a_{1} \varphi_{1}(x)+\cdots a_{m} \varphi_{m}(x) \quad (m<n)$$
+
+联立上两式得，使误差的 2 -范数 $\|\delta\|_{2}^{2}$ 取最小值的问题转化为求下列多元函数：
+
+$$F\left (a_{0}, a_{1}, \cdots a_{m}\right)=\sum_{i=0}^{n}\left (\sum_{j=0}^{m} a_{j} \varphi_{j}\left (x_{i}\right)-y_{i}\right)^{2}$$
+
+的极小点 $\left (a_{0}^{*}, a_{1}^{*}, \cdots a_{m}^{*}\right)$，即令：
+
+$$\frac{\partial F}{\partial a_{k}}=0 \quad (k=0,1,2, \cdots m)$$
+
+
+由此得：
+
+$$\sum_{i=0}^{n}\left (\sum_{j=0}^{m} a_{j} \varphi_{j}\left (x_{i}\right)-y_{i}\right) \varphi_{k}\left (x_{i}\right)=0 \quad (k=0,1,2, \cdots m)$$
+
+若用离散意义下函数时的内积符号：
+
+$$\left (\varphi_{j}, \varphi_{k}\right)=\sum_{i=0}^{n} \varphi_{j}\left (x_{i}\right) \varphi_{k}\left (x_{i}\right) \quad\left (f, \varphi_{k}\right)=\sum_{i=0}^{n} y_{i} \varphi_{k}\left (x_{i}\right)=d_{k}$$
+
+式子可写为
+
+$$\sum_{j=0}^{m}\left (\varphi_{k}, \varphi_{j}\right) a_{j}=d_{k} \quad (k=0,1,2, \cdots m)$$
+
+其矩阵的形式为
+
+$$\left[\begin{array}{cccc}
+\left (\varphi_{0}, \varphi_{0}\right) & \left (\varphi_{0}, \varphi_{1}\right) & \cdots & \left (\varphi_{0}, \varphi_{m}\right) \\
+\left (\varphi_{1}, \varphi_{0}\right) & \left (\varphi_{1}, \varphi_{1}\right) & \cdots & \left (\varphi_{1}, \varphi_{m}\right) \\
+\vdots & \vdots & \ddots & \vdots \\
+\left (\varphi_{m}, \varphi_{0}\right) & \left (\varphi_{m}, \varphi_{1}\right) & \cdots & \left (\varphi_{m}, \varphi_{m}\right)
+\end{array}\right]\left[\begin{array}{c}
+a_{0} \\
+a_{1} \\
+\vdots \\
+a_{m}
+\end{array}\right]=\left[\begin{array}{c}
+d_{0} \\
+d_{1} \\
+\vdots \\
+d_{m}
+\end{array}\right]$$
+
+当函数类 $\Phi=\left\{\varphi_{0}(x), \varphi_{1}(x), \cdots \varphi_{m}(x)\right\}=\left\{1, x, x^{2}, \cdots x^{m}\right\}$ 时，
+
+$$p (x)=a_{0}+a_{1} x+\cdots a_{m} x^{m}$$
+
+为 $m$ 次多项式。相应地，曲线拟合成为多项式拟合，法方程可写为：
+
+$$\left[\begin{array}{cccc}
+\sum 1 & \sum x_{i} & \cdots & \sum x_{i}^{m} \\
+\sum x_{i} & \sum x_{i}^{2} & \cdots & \sum x_{i}^{m+1} \\
+\vdots & \vdots & \vdots & \vdots \\
+\sum x_{i}^{m} & \sum x_{i}^{m+1} & \cdots & \sum x_{i}^{2 m}
+\end{array}\right]\left[\begin{array}{c}
+a_{0} \\
+a_{1} \\
+\vdots \\
+a_{m}
+\end{array}\right]=\left[\begin{array}{c}
+\sum y_{i} \\
+\sum x_{i} y_{i} \\
+\vdots \\
+\sum x_{i}^{m} y_{i}
+\end{array}\right]$$
+
+实际计算和分析表明当 $m$ 较大时，为“病态”方程组。
 
 # 最优化方法
 
 ## 凸集和凸函数
 
+### 定义 5.1
+
+设集合 $D \subset \mathbf{R}^{n}$，若对于任意点 $x, y \in D$，有：
+
+$$\lambda x+(1-\lambda) y \in D, \quad \forall 0 \leq \lambda \leq 1$$
+
+则称集合 $D$ 为凸集。
+
+常见的凸集：
+
+> 超平面 $H=\left\{x \mid p^{\mathrm{T}} x=\alpha\right\}$ 是凸集，其中 $p \in \mathbf{R}^{n}$ 是非零向量，称为超平面的法向量，$\alpha$ 为实数。
+
+> 闭半空间 $H^{-}=\left\{x \mid p^{\mathrm{T}} x \leq \alpha\right\}$ 和 $H^{+}=\left\{x \mid p^{\mathrm{T}} x \geq \alpha\right\}$ 是凸集。
+> 开半空间 $H_{0}^{-}=\left\{x \mid p^{\mathrm{T}} x<\alpha\right\}$ 和 $H_{0}^{+}=\left\{x \mid p^{\mathrm{T}} x>\alpha\right\}$ 是凸集。
+> 由有限个闭半空间的交组合成的集合 $D=\left\{x \mid p_{i}^{\mathrm{T}} x \leq \beta_{i}, i=1, \cdots, m\right\}$ 叫多面集（polyhetral），其中 $p_{i}$ 是非零向量，$\beta_{i}$ 是数。多面集是一个凸闭集。
+
+### 凸集的性质
+
+设 $D_{1}, D_{2} \subset \mathbf{R}^{n}$ 是凸集，则：
+
+1) 两个凸集的交 $D_{1} \cap D_{2}=\left\{x \mid x \in D_{1}\right.  且  \left. x \in D_{2}\right\}$ 是凸集。
+2) 两个凸集的和 $D_{1}+D_{2}=\left\{x+y \mid x \in D_{1}, y \in D_{2}\right\}$ 是凸集。
+3) 两个凸集的差 $D_{1}-D_{2}=\left\{x-y \mid x \in D_{1}, y \in D_{2}\right\}$ 是凸集。
+4) 对于任意非零实数 $\alpha$，集合 $\alpha D_{1}=\left\{\alpha x \mid x \in D_{1}\right\}$ 是凸集。
+
+### 定理 5.1
+
+$D \subset \mathbf{R}^{n}$ 是凸集的充分必要条件是 $D$ 中任意 $m$ 个点 $x^{(i)}(i=1,2, \cdots, m)$ 的凸组合仍属于 $D$，即有：
+
+$$\sum_{i=1}^{m} \alpha_{i} x^{(i)} \in D, \alpha_{i} \geq 0 (i=1,2, \cdots, m), \quad \sum_{i=1}^{m} \alpha_{i}=1$$
+
+### 定义 5.2
+
+设 $D_{1}, D_{2} \subset \mathbf{R}^{n}$ 为两非空凸集，若存在非零向量 $\alpha \in \mathbf{R}^{n}$ 和实数 $\beta$，使得：
+
+$$\begin{array}{l}
+D_{1} \subset H^{+}=\left\{x \in \mathbf{R}^{n} \mid \alpha^{\mathrm{T}} x \geq \beta\right\} \\
+D_{2} \subset H^{-}=\left\{x \in \mathbf{R}^{n} \mid \alpha^{\mathrm{T}} x \leq \beta\right\}
+\end{array}$$
+
+则称超平面：
+
+$H=\left\{x \in \mathbf{R}^{n} \mid \alpha^{\mathrm{T}} x=\beta\right\}$
+
+分离集合 $D_{1}$ 和 $D_{2}$。如果更有
+
+$$\begin{array}{l}
+D_{1} \subset H_{0}^{+}=\left\{x \in \mathbf{R}^{n} \mid \alpha^{\mathrm{T}} x>\beta\right\} \\
+D_{2} \subset H_{0}^{-}=\left\{x \in \mathbf{R}^{n} \mid \alpha^{\mathrm{T}} x<\beta\right\}
+\end{array}$$
+
+则称超平面 $H$ 严格分离 $D_{1}$ 和 $D_{2}$，其中 $H_{0}^{+}$，$H_{0}^{-}$ 分别表示集合 $H^{+}$，$H^{-}$ 的内部。
+
+### 定理 5.2
+
+设 $D \subset \mathbf{R}^{n}$ 是非空闭凸集，$y \in \mathbf{R}^{n}$ 但 $y \notin D$，则
+
+1) 存在唯一的点 $\bar{x} \in D$，使得集合 $D$ 到点 $y$ 的距离最小，即 $$\|\bar{x}-y\|=\inf _{x \in D}\|x-y\|$$
+2) $\bar{x} \in D$ 是点 $y$ 到集合 $D$ 的最短距离点的充分必要条件为 $$(x-\bar{x})^{\mathrm{T}}(\bar{x}-y) \geq 0, \forall x \in D$$ 或写成 $$\langle x-\bar{x}, y-\bar{x}\rangle \leq 0, \forall x \in D$$
+
+### 定理 5.3
+
+设 $D \subset \mathbf{R}^{n}$ 为非空闭凸集，$y \in \mathbf{R}^{n}$，$y \notin D$，则存在非零向量 $\alpha \in \mathbf{R}^{n}$ 和实数 $\beta$，使得
+
+$$\alpha^{\mathrm{T}} x \leq \beta<\alpha^{\mathrm{T}} y, \quad \forall x \in D$$
+
+成立，即存在超平面 $H=\left\{x \in \mathbf{R}^{n} \mid \alpha^{\mathrm{T}} x=\beta\right\}$ 严格分离点 $y$ 与凸集 $D$。
+
+### 定义 5.3
+
+设函数 $f (x)$ 在凸集 $D$ 上有定义，如果对任意 $x , y \in D$ 和任意 $\lambda \in[0,1]$，有：
+
+$$f (\lambda x+(1-\lambda) y) \leq \lambda f (x)+(1-\lambda) f (y)$$
+
+则称 $f (x)$ 是凸集 $D$ 上的凸函数。
+
+如果对任意 $x , y \in D, x \neq y$ 和任意有 $\lambda \in (0,1)$ 有：
+
+$$f (\lambda x+(1-\lambda) y)<\lambda f (x)+(1-\lambda) f (y)$$
+
+则称 $f (x)$ 是凸集 $D$ 上的严格凸函数。
+
+1) 如果 $f$ 是定义在凸集 $D$ 上的凸函数，实数 $\alpha \geq 0$，则 $\alpha f$ 也是凸集 $D$ 上的凸函数。
+2) 如果 $f_{1} , f_{2}$  是定义在凸集 $D$ 上的凸函数，则 $f_{1}+f_{2}$ 也是凸集 $D$ 上的凸函数。
+3) 如果 $f_{i}(x)(i=1, \cdots, m)$ 是非空凸集 $D$ 上的凸函数，则 $f (x)=\max\limits_{1 \leq i \leq m}\left|f_{i}(x)\right|$ 也是凸集 $D$ 上的凸函数。
+4) 如果 $f_{i}(x)(i=1, \cdots, m)$ 是非空凸集 $D$ 上的凸函数，则 $f (x)=\sum_{i=1}^{m} \alpha_{i} f_{i}(x)$ 也是凸集 $D$ 上的凸函数，其中 $\alpha_{i} \geq 0 (i=   1, \cdots, m)$。 
+
+### 定理 5.4
+
+设 $x^{*}$ 是凸规划问题的一个局部最优解，则：
+
+1) 局部最优解 $x^{*}$ 也是全局最优解。
+2) 如果目标函数是严格凸的，则 $x^{*}$ 是唯一的全局最优解。
+
+### 定理 5.5
+
+设 $f (x)$ 是定义在非空开凸集 $D$ 上的可微函数，则
+
+1) $f (x)$ 是 $D$ 上凸函数的充分必要条件是 $$f (y) \geq f (x)+\nabla f (x)^{\mathrm{T}}(y-x), \forall x, y \in D$$
+2) $f (x)$ 是 $D$ 上严格凸函数的充分必要条件是 $$f (y)>f (x)+\nabla f (x)^{\mathrm{T}}(y-x), \forall x, y \in D, x \neq y$$
+
+### 定理 5.6
+
+设 $f (x)$ 是非空开凸集 $D \subset \mathbf{R}^{n}$ 上的二阶可微函数，则
+1) $f (x)$ 是 $D$ 上凸函数的充分必要条件是 $f (x)$ 的 Hesse 矩阵（二阶导数矩阵）$\nabla^{2} f (x)$ 在 $D$ 上半正定，即对每一个 $x \in D$，有 $$y^{\mathrm{T}} \nabla^{2} f (x) y \geq 0, \forall y \in \mathbf{R}^{n}$$
+2) 如果 $f (x)$ 的 Hesse 矩阵 $\nabla^{2} f (x)$ 在 $D$ 上正定，则 $f (x)$ 是 $D$ 上严格凸函数；反之，如果 $f (x)$ 是 $D$ 上严格凸函数，则 $\nabla^{2} f (x)$ 在 $D$ 上半正定。
+
 ## 最优化问题
+
+最优化问题的一般形式为：
+
+$$\begin{array}{l}
+\text { P: } &\min &f (x) &\text{(5.1) (目标函数)}\\
+&\text { s.t. } & h_{i}(x)=0, i=1,2, \cdots, m &\text{(5.2) (等式约束)}\\
+&& h_{i}(x) \geq 0, i=m+1, \cdots, p &\text{(5.3) (不等式约束)}
+\end{array}$$
+
+其中 $x$ 是 $n$ 维向量。
+
+在实际应用中, 可以将求最大值的目标函数取相反数后统一成公式中求最小值的形式，我们总是讨论 $\min f (x)$。
+
+### 定义 5.4
+
+满足约束条件 (5.2)和 (5.3)的 $x$ 称为可行解，也称为可行点（Feasible Point）或容许点。
+
+### 定义 5.5
+
+全体可行解构成的集合称为可行域（Feasible Region），也称为容许集，记为 $D$，即：
+
+$$D=\left\{x \mid h_{i}(x)=0, i=1, \cdots, m, h_{j}(x) \geq 0, i=m+1, \cdots, p, x \in \mathbf{R}^{n}\right\}$$
+
+若 $h_{i}(x)$ 为连续函数，则 $D$ 为闭集。
+
+### 定义 5.6
+
+若 $x^{*} \in D$，对于一切 $x \in D$ 恒有 $f\left (x^{*}\right) \leq   f (x)$，则称 $x^{*}$ 为最优化问题（P）的整体最优解。
+
+若 $x^{*} \in D ， x \neq x^{*}$，恒有 $f\left (x^{*}\right)<f (x)$，则称 $x^{*}$ 为最优化问题（P）的严格整体最优解。
+
+### 定义 5.7
+
+若 $x^{*} \in D$，存在 $x^{*}$ 的某邻域 $N_{\varepsilon}\left (x^{*}\right)$，使得对于一切 $x \in D \cap N_{\varepsilon}\left (x^{*}\right)$，恒有 $f\left (x^{*}\right) \leq f (x)$，则称为最优化问题（P）的局部最优解。
+
+> 其中 $N_{\varepsilon}\left (x^{*}\right)=\left\{x \mid\left\|x-x^{*}\right\|<\varepsilon, \varepsilon>0\right\}$。 
+> 当 $x \neq x^{*}$ 时，若上面的不等式为严格不等式则称 $x^{*}$ 为问题（P）的严格局部最优解。
+
+显然，整体最优解一定是局部最优解，而局部最优解不一定是整体最优解。
+
+求解最优化问题（P），就是求目标函数 $f (x)$ 在约束条件 (5.2)和 (5.3)下的极小点，实际上是求可行域 $D$ 上的整体最优解。
+
+在一般情况下，整体最优解是很难求出的，往往只能求出局部最优解。
+
+最优性条件：最优化问题的最优解（局部的或全局的）所必须满足的条件，常用的有一阶必要条件和二阶必要条件。
+
+### 定义 5.8
+
+存在一个 $n$ 元实值函数 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，定义域 $\Omega \subset \mathbf{R}^{n}$。对于定义域 $\Omega$ 中的一个点 $x^{*}$，如果存在 $\varepsilon>0$，对于所有满足 $\left\|x-x^{*}\right\|<\varepsilon, x \in \Omega \backslash\left\{x^{*}\right\}$ 的向量 $x$，不等式 $f (x) \geq f\left (x^{*}\right)$ 都成立，则称 $x^{*}$ 是函数 $f$ 在定义域 $\Omega$ 中的一个局部极小点。如果对于所有 $x \in \Omega \backslash\left\{x^{*}\right\}$，不等式 $f (x) \geq f\left (x^{*}\right)$ 都成立，则称 $x^{*}$ 是函数 $f$ 在定义域 $\Omega$ 中的一个全局极小点。
+
+如果将上述定义中的 $f (x) \geq f\left (x^{*}\right)$ 替换为 $f (x)>f\left (x^{*}\right)$，那么局部极小点和全局极小点则对应成为严格局部极小点和严格全局极小点。
+
+### 定义 5.9
+
+设 $f (x)$ 为定义在空间 $\mathbf{R}^{n}$ 上的连续函数，点 $\bar{x} \in \mathbf{R}^{n}$，若对于方向 $s \in \mathbf{R}^{n}$ 存在 $\delta>0$ 使成立 $$f (\bar{x}+\alpha s)<f (\bar{x}), \forall \alpha \in (0, \delta)$$
+则称 $s$ 为 $f (x)$ 在 $x$ 处的一个下降方向。在点 $x$ 处的所有下降方向的全体记为 $D (\bar{x})$。
+
+### 定理 5.7
+
+设函数 $f (x)$ 在点 $x$ 处连续可微，如存在非零向量 $s \in \mathbf{R}^{n}$ 使成立 $$\nabla f (\bar{x})^{\mathrm{T}} s<0$$
+则 $s$ 是 $f (x)$ 在 $\bar{x}$ 处的一个下降方向。
+
+### 定理 5.8
+
+设 $f: \mathrm{D} \subset \mathbf{R}^{n} \rightarrow \mathbf{R}^{1}$ 在开集 $D$ 上连续可微，若 $x^{*} \in \mathrm{D}$ 是 $\min _{x \in \mathbf{R}^{n}} f (x)$ 的局部极小点，则 $$g\left (x^{*}\right)=\nabla f\left (x^{*}\right)=0$$
+
+### 定理 5.9
+
+设 $f: \mathrm{D} \subset \mathbf{R}^{n} \rightarrow \mathbf{R}^{1}$ 在开集 $D$ 上二阶连续可微，若 $x^{*} \in \mathrm{D}$ 是 $\min _{x \in \mathbf{R}^{n}} f (x)$ 的局部极小点，则 $$g\left (x^{*}\right)=0, G\left (x^{*}\right)=\nabla^{2} f\left (x^{*}\right) \geq 0$$
+
+
+### 定理 5.10
+
+设 $f: \mathrm{D} \subset \mathbf{R}^{n} \rightarrow \mathbf{R}^{1}$ 在开集 $D$ 上二阶连续可微，则 $x^{*} \in D$ 是 $f$ 的一个严格局部极小点的充分条件是 $g\left (x^{*}\right)=0$ 和 $G\left (x^{*}\right)$ 是正定矩阵。
+
+### 定理 5.11
+
+设 $f: \mathrm{D} \subset \mathbf{R}^{n} \rightarrow \mathbf{R}^{1}$ 是凸函数，且 $f \in C^{1}$，则 $x^{*}$ 是总体极小点的充分必要条件是 $g\left (x^{*}\right)=0$。
 
 ## 最优化方法
 
+最优化问题的算法的基本迭代格式：
 
+1) 给定初始点 $x^{(0)}$，令 $k=0$；
+2) 如果 $x^{(k)}$ 满足对最优解估计的终止条件，停止迭代；
+3) 确定一个改善 $x^{(k)}$ 的修正量 $s^{(k)}$；
+4) 得到最优解的一个更好的估计 $x^{(k+1)}=x^{(k)}+s^{(k)}$，置 $k=k+1$ 后转到 (2)。
+
+### 最优化方法的收敛性
+
+> 如果一个算法只有当初始点 $x^{(0)}$ 充分接近 $x^{*}$ 时，产生的点列才收敛于 $x^{*}$，则称该算法为具有局部收敛的算法。
+> 如果对任意的 $x^{(0)} \in D$，由算法产生的点列都收敛 $x^{*}$，则称该算法为具有全局收敛的算法。
+
+由于一般情况下最优解 $x^{*}$ 是未知的，所以只有具有全局收敛性的算法才有实用意义。
+
+算法的局部收敛性分析，在理论上是非常重要的，因为它是全局收敛性分析的基础。
+
+### 定义 5.9
+
+设向量序列 $\left\{x^{(k)}\right\} \subset \mathbf{R}^{n}$ 收敛于 $x^{*}$，定义误差序列
+
+$$e_{k}=x^{(k)}-x^{*}$$
+
+如果存在正的常数 $C$ 和 $r$ 使成立：
+
+$$\lim _{k \rightarrow \infty} \frac{\left\|e_{k+1}\right\|}{\left\|e_{k}\right\|^{r}}=C$$
+
+则称序列 $\left\{x^{(k)}\right\}$，$r$ 阶收敛于 $x^{*}$（以 $C$ 为因子）。
+
+> 当 $r=1,0<C<1$ 时称为线性收敛，这时的误差序列满足 $$\left\|e_{k+1}\right\| \leq C\left\|e_{k}\right\|$$
+> 当 $r=1, C=0$ 时，称序列 $\left\{x^{(k)}\right\}$ 超线性收敛于 $x^{*}$，超线性收敛是一种比线性收敛更快的收敛，在上述收敛率的定义中，所有 $r>1$ 的收敛都属于超线性收敛。
+
+### 最优化方法的终止准则
+
+对于一种算法，应该有某种终止准则，当某次迭代满足终止准则时，就停止迭代。常用的终止准则有：
+
+1) $\left\|x^{(k+1)}-x^{(k)}\right\| \leq \varepsilon$ 或 $\frac{\left\|x^{(k+1)}-x^{(k)}\right\|}{\left\|x^{(k)}\right\|} \leq \varepsilon$；
+2) $\left|f\left (x^{(k+1)}\right)-f\left (x^{(k)}\right)\right| \leq \varepsilon$ 或 $\frac{\left|f\left (x^{(k+1)}\right)-f\left (x^{(k)}\right)\right|}{\left|f\left (x^{(k)}\right)\right|} \leq \varepsilon$；
+3) $\left\|\nabla f\left (x^{(k)}\right)\right\| \leq \varepsilon$；
+4) 上面三种准则的组合。
+
+其中 $\varepsilon>0$ 是预先给定的。
+
+### 黄金分割法
+
+1) 选取初始数据，确定初始搜索区间 $\left[a_{0}, b_{0}\right]$ 和精度要求 $\delta>0$。计算最初两个试探点 $\lambda_{0}, \mu_{0}$$$\begin{array}{l}
+\lambda_{0}=a_{0}+0.382\left (b_{0}-a_{0}\right) \\
+\mu_{0}=a_{0}+0.618\left (b_{0}-a_{0}\right)
+\end{array}$$ 计算 $\varphi\left (\lambda_{0}\right)$ 和 $\varphi\left (\mu_{0}\right)$，令 $k=0$。 
+2) 比较目标函数值，若 $\varphi\left (\lambda_{k}\right)>\varphi\left (\mu_{k}\right)$，转 (3)；否则转 (4)；
+3) 若 $b_{k}-\lambda_{k} \leq \delta$，则停止计算，输出 $\mu_{k}$；否则，令 $$\begin{array}{c}
+a_{k+1}:=\lambda_{k}, b_{k+1}:=b_{k}, \lambda_{k+1}:=\mu_{k} \\
+\varphi\left (\lambda_{k+1}\right):=\varphi\left (\mu_{k}\right), \mu_{k+1}:=a_{k+1}+0.618\left (b_{k+1}-a_{k+1}\right)
+\end{array}$$ 计算 $\varphi\left (\lambda_{k+1}\right)$，转 (5)；
+4) 若 $\mu_{k}-a_{k} \leq \delta$，则停止计算，输出 $\lambda_{k}$；否则，令 $$\begin{array}{c}
+a_{k+1}:=a_{k}, b_{k+1}:=\mu_{k}, \mu_{k+1}:=\lambda_{k} \\
+\varphi\left (\mu_{k+1}\right):=\varphi\left (\lambda_{k}\right), \lambda_{k+1}:=a_{k+1}+0.382\left (b_{k+1}-a_{k+1}\right)
+\end{array}$$ 计算 $\varphi\left (\lambda_{k+1}\right)$，转 (5)；
+5) $k:=k+1$，转 (2)。
+
+### 二分法
+
+1) 给出初始区间 $\left[a_{1}, b_{1}\right]$，最后区间长度 $\delta$，令 $k=1$。
+2) 取 $c_{k}=\frac{1}{2}\left (a_{k}+b_{k}\right)$，计算 $\varphi^{\prime}\left (c_{k}\right)$。如果 $\varphi^{\prime}\left (c_{k}\right)=0$，停止，$c_{k}$ 是最优解；否则，如果 $\varphi^{\prime}\left (c_{k}\right)>0$，转 (3)。如果，$\varphi^{\prime}\left (c_{k}\right)<0$，转 (4)；
+3) 令 $a_{k+1}=a_{k}, b_{k+1}=c_{k}$，转 (5)；
+4) 令 $a_{k+1}=c_{k}, b_{k+1}=b_{k}$，转 (5)；
+5) 如果 $b_{k+1}-a_{k+1} \leq \delta$，停止；否则 $k:=k+1$，转 (1)。
